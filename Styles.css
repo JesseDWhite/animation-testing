@@ -21,15 +21,6 @@ body {
   animation: move 50000ms infinite alternate ease-in-out;
 }
 
-@keyframes move {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-
 #test:hover {
   background-color: #ffee00;
   color: black;
@@ -52,15 +43,6 @@ body {
   animation: move 30000ms infinite alternate ease-in-out;
 }
 
-@keyframes move {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-
 #test2:hover {
   background-color: #ffee00;
   color: black;
@@ -80,17 +62,8 @@ body {
   transition: width 2s, height 2s, background-color 2s, color 2s, transform 2s;
   text-align: center;
   font-size: 40px;
-  offset-path: path('M-40,0 C-150,10 150,100 100,0');
+  offset-path: path('M-40,200 C-150,150 150,100 100,0');
   animation: move 10000ms infinite alternate ease-in-out;
-}
-
-@keyframes move {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
 }
 
 #test3:hover {
@@ -112,8 +85,39 @@ body {
   transition: width 2s, height 2s, background-color 2s, color 2s, transform 2s;
   text-align: center;
   font-size: 40px;
-  offset-path: path('M500,0 C500,10 150,100 100,0');
-  animation: move 10000ms infinite alternate ease-in-out;
+  offset-path: path('M-500,200 C500,-200 150,100 100,250');
+  animation: move 20000ms infinite alternate ease-in-out;
+}
+
+#test4:hover {
+  background-color: #ffee00;
+  color: black;
+  width: 250px;
+  height: 250px;
+  /* transform: rotate(1800deg); */
+}
+
+#test5 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #00000060;
+  transition: width 2s, height 2s, background-color 2s, color 2s, transform 2s;
+  text-align: center;
+  font-size: 40px;
+  offset-path: path('M-500,-250 C-500, 500 500,-500 800,0');
+  animation: move 60000ms infinite alternate ease-in-out;
+}
+
+#test5:hover {
+  background-color: #ffee00;
+  color: black;
+  width: 250px;
+  height: 250px;
+  /* transform: rotate(1800deg); */
 }
 
 @keyframes move {
@@ -123,12 +127,4 @@ body {
   100% {
     offset-distance: 100%;
   }
-}
-
-#test4:hover {
-  background-color: #ffee00;
-  color: black;
-  width: 250px;
-  height: 250px;
-  /* transform: rotate(1800deg); */
 }
